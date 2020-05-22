@@ -20,9 +20,9 @@
     </header>
 
     <main>
-      <h1>Интернет магазин «Nerds»</h1>   <!--заголовок будет скрыт-->
+      <h1 class="visually-hidden">Интернет магазин «Nerds»</h1>
       <section>
-        <h2>Наша преимущества</h2>       <!--заголовок будет скрыт-->
+        <h2 class="visually-hidden">Наши преимущества</h2> 
         <div>
           <p>Долго, дорого, скурпулезно.</p>
           <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
@@ -51,7 +51,7 @@
         </ul>
       </section>
       <section>
-        <h2>Услуги</h2>    <!--заголовок будет скрыт-->
+        <h2 class="visually-hidden">Услуги</h2>
         <ul>
           <li>
             <div>
@@ -77,7 +77,7 @@
         </ul>
       </section>
       <section>
-        <h2>О студии</h2>    <!--заголовок будет скрыт-->
+        <h2 class="visually-hidden">О студии</h2>
           <div>
             <p>Мы - маленькая, но гордая дизайн-студия из Краснодара.</p>
             <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
@@ -105,13 +105,13 @@
           </div>
       </section>
       <section>
-        <h2>Партнёры</h2>    <!--заголовок будет скрыт-->
+        <h2 class="visually-hidden">Партнёры</h2>
         <ul>
           <li>
             <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/html-academy.png" width="199" height="68" alt="Школа веб-разработчиков HTML Academy"></a>
           </li>
           <li>
-            <a href="blank.html"><img src="img/boroinski.png" width="209" height="90" alt="Салон красоты для мужчин Barbershop Borodinski"></a>
+            <a href="blank.html"><img src="img/borodinski.png" width="209" height="90" alt="Салон красоты для мужчин Barbershop Borodinski"></a>
           </li>
           <li>
             <a href="blank.html"><img src="img/pink.png" width="185" height="52" alt="Приложение для обработки фото и общения Pink"></a>
@@ -125,7 +125,7 @@
 
     <footer>
       <section>
-        <h2>Адрес</h2>     <!--заголовок будет скрыт-->
+        <h2 class="visually-hidden">Адрес студии</h2>
         <img src="img/map.png" width="1440" height="416" alt="191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
         <p>Nërds Design Studio</p>
         <address>
@@ -134,10 +134,10 @@
           <br>
           тел. +7(812) 275-75-75
         </address>
-        <a href="blank.html">Напишите нам</a>
+        <a href="blank.html" aria-label="Отправить сообщение">Напишите нам</a>
       </section>
       <section>
-        <h2>Социальные сети</h2>     <!--заголовок будет скрыт-->
+        <h2 class="visually-hidden">Социальные сети</h2>
         <ul>
           <li><a href="blank.html">ВК</a></li>
           <li><a href="blank.html">Facebook</a></li>
@@ -150,9 +150,18 @@
 
     <!--Попап-->
     <section>
-      <h2>Обратная связь</h2>        <!--заголовок будет скрыт-->
+      <h2 class="visually-hidden">Обратная связь</h2>
       <p>Напишите нам</p>
-      <form></form>
+      <form action="https://echo.htmlacademy.ru" method="POST">
+        <label for="field_name">Ваше имя:</label>
+        <input type="text" id="field_name" name="name" placeholder="Имя Фамилия" required>
+        <label for="field_email">Ваш email:</label>
+        <input type="email" id="field_email" name="email" placeholder="email@example.com" required>
+        <label for="field_message">Текст письма:</label>
+        <textarea id="field_message" name="message" required></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+      <button type="button">Закрыть окно</button>
     </section>
 
   </body>
