@@ -9,36 +9,37 @@
     <header>
         <nav>
           <ul>
-            <li><a href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс"></a></li>
-            <li><a href="blank.html">Студия</a></li>
-            <li><a href="blank.html">Клиенты</a></li>
+            <li><a href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии &laquo;Нёрдс&raquo;"></a></li>
+            <li><a href="studio.html">Студия</a></li>
+            <li><a href="clients.html">Клиенты</a></li>
             <li><a>Магазин</a></li>
-            <li><a href="blank.html">Контакты</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
           </ul>
-          <a href="blank.html">Корзина</a>
+          <ul>
+            <li><a href="cart.html">Корзина</a></li>
+          </ul>
         </nav>
       </header>
 
       <main>
           <h1>Магазин готовых шаблонов</h1>
           <section>
-              <h2 class="visually-hidden">Фильтр</h2>
-              <p>Стоимость:</p>
-              <form action="https://echo.htmlacademy.ru" method="GET">
+              <h2 class="visually-hidden">Подбор шаблона по параметрам</h2>
+              <form action="https://echo.htmlacademy.ru" method="get">
+                <fieldset>
+                  <legend>Стоимость:</legend>
+                </fieldset>
                 <fieldset>
                   <legend>Сетка:</legend>
                   <ul>
                     <li>
-                      <input type="radio" id="filter_adaptive" name="grid_type" value="adaptive" checked>
-                      <label for="filter_adaptive">Адаптивная</label>
+                      <label><input type="radio" name="grid" value="adaptive" checked>Адаптивная</label>
                     </li>
                     <li>
-                      <input type="radio" id="filter_fixed" name="grid_type" value="fixed">
-                      <label for="filter_fixed">Фиксированная</label>
+                      <label><input type="radio" name="grid" value="fixed">Фиксированная</label>
                     </li>
                     <li>
-                      <input type="radio" id="ilter_stretching" name="grid_type" value="stretching">
-                      <label for="filter_stretching">Резиновая</label>
+                      <label><input type="radio" name="grid" value="stretching">Резиновая</label>
                     </li>
                   </ul>
                 </fieldset>
@@ -46,24 +47,19 @@
                   <legend>Особенности:</legend>
                   <ul>
                     <li>
-                      <input type="checkbox" id="filter_slider" name="slider" checked>
-                      <label for="filter_slider">Слайдер</label>
+                      <label><input type="checkbox" name="slider" checked>Слайдер</label>
                     </li>
                     <li>
-                      <input type="checkbox" id="filter_benefits" name="benefits">
-                      <label for="filter_benefits">Блок преимуществ</label>
+                      <label><input type="checkbox" name="benefits">Блок преимуществ</label>
                     </li>
                     <li>
-                      <input type="checkbox" id="filter_news" name="news" checked>
-                      <label for="filter_news">Новости</label>
+                      <label><input type="checkbox" name="news" checked>Новости</label>
                     </li>
                     <li>
-                      <input type="checkbox" id="filter_gallery" name="gallery">
-                      <label for="filter_gallery">Галерея</label>
+                      <label><input type="checkbox" name="gallery">Галерея</label>
                     </li>
                     <li>
-                      <input type="checkbox" id="filter_cart" name="cart">
-                      <label for="filter_cart">Корзина</label>
+                      <label><input type="checkbox" name="cart">Корзина</label>
                     </li>
                   </ul>
                 </fieldset>
@@ -71,89 +67,75 @@
               </form>
           </section>
           <section>
-              <h2 class="visually-hidden">Сортировка</h2>
-              <p>Сортировать:</p>
-              <form></form>
-          </section>
-          <section>
-              <h2 class="visually-hidden">Товары</h2>
+              <h2 class="visually-hidden">Каталог шаблонов</h2>
+              <div>
+                <p>Сортировать:</p>
+              </div>
               <ul>
                 <li>
-                  <a href="blank.html"><img src="img/img-sedona.jpg" width="360" height="576" alt="Информационный сайт для туристов-Sedona"></a>
-                  <div>
-                      <a href="blank.html"><h3>Sedona</h3></a>
-                      <p>Информационный сайт для туристов</p>
-                      <button type="button" aria-label="Купить за 9900 рублей">9 900 Р</button>
-                  </div>
+                    <p><img src="img/img-sedona.jpg" width="360" height="576" alt="Превью сайта Sedona"></p>
+                    <a href="blank.html"><h3>Sedona</h3></a>
+                    <p>Информационный сайт для туристов</p>
+                    <a href="cart.html" aria-label="Купить за 9900 рублей">9 900 Р</a>
                 </li>
                 <li>
-                  <a href="blank.html"><img src="img/img-pink.jpg" width="358" height="576" alt="Продуктовый лендинг приложения для iOS и Android-Pink"></a>
-                  <div>
+                    <p><img src="img/img-pink.jpg" width="358" height="576" alt="Превью приложения Pink"></p>
                     <a href="blank.html"><h3>Pink App</h3></a>
                     <p>Продуктовый лендинг приложения для iOS и Android</p>
-                    <button type="button" aria-label="Купить за 9900 рублей">9 900 Р</button>
-                  </div>
+                    <a href="cart.html" aria-label="Купить за 9900 рублей">9 900 Р</a>
                 </li>
                 <li>
-                  <a href="blank.html"><img src="img/img-barbershop.jpg" width="364" height="582" alt="Сайт салона красоты-Barbershop Borodinski"></a>
-                  <div>
+                    <p><img src="img/img-barbershop.jpg" width="364" height="582" alt="Превью сайта Barbershop Borodinski"></p>
                     <a href="blank.html"><h3>Barbershop</h3></a>
                     <p>Сайт салона красоты.<br>Для мужчин, да.</p>
-                    <button type="button" aria-label="Купить за 9900 рублей">9 900 Р</button>
-                  </div>
+                    <a href="cart.html" aria-label="Купить за 9900 рублей">9 900 Р</a>
                 </li>
                 <li>
-                  <a href="blank.html"><img src="img/img-mishka.jpg" width="362" height="580" alt="Интернет-магазин вязаных игрушек-Mishka"></a>
-                  <div>
+                    <p><img src="img/img-mishka.jpg" width="362" height="580" alt="Превью сайта Mishka"></p>
                     <a href="blank.html"><h3>Mishka</h3></a>
                     <p>Интернет-магазин вязаных игрушек</p>
-                    <button type="button" aria-label="Купить за 9900 рублей">9 900 Р</button>
-                  </div>
+                    <a href="cart.html" aria-label="Купить за 9900 рублей">9 900 Р</a>
                 </li>
                 <li>
-                  <a href="blank.html"><img src="img/img-aplus.jpg" width="364" height="582" alt="Лендинг курсов повышения квалификации-A+"></a>
-                  <div>
+                    <p><img src="img/img-aplus.jpg" width="364" height="582" alt="Превью сайта A+"></p>
                     <a href="blank.html"><h3>A Plus</h3></a>
                     <p>Лендинг курсов повышения квалификации</p>
-                    <button type="button" aria-label="Купить за 9900 рублей">9 900 Р</button>
-                  </div>
+                    <a href="cart.html" aria-label="Купить за 9900 рублей">9 900 Р</a>
                 </li>
                 <li>
-                  <a href="blank.html"><img src="img/img-kvast.jpg" width="362" height="580" alt="Промо-сайт производителя крафтового кваса-Кваст"></a>
-                  <div>
+                    <p><img src="img/img-kvast.jpg" width="362" height="580" alt="Превью сайта Кваст"></p>
                     <a href="blank.html"><h3>Кваст</h3></a>
                     <p>Промо-сайт производителя крафтового кваса</p>
-                    <button type="button" aria-label="Купить за 9900 рублей">9 900 Р</button>
-                  </div>
+                    <a href="cart.html" aria-label="Купить за 9900 рублей">9 900 Р</a>
                 </li>
               </ul>
               <ul>
                 <li><a aria-label="Первая страница каталога">1</a></li>
-                <li><a href="blank.html" aria-label="Вторая страница каталога">2</a></li>
-                <li><a href="blank.html" aria-label="Третья страница каталога">3</a></li>
-                <li><a href="blank.html" aria-label="Переход на следующую страницу каталога">Следующая</a></li>
+                <li><a href="#" aria-label="Вторая страница каталога">2</a></li>
+                <li><a href="#" aria-label="Третья страница каталога">3</a></li>
+                <li><a href="#" aria-label="Переход на следующую страницу каталога">Следующая</a></li>
+              </ul>
           </section>
       </main>
 
       <footer>
         <section>
-          <h2 class="visually-hidden">Адрес студии</h2>
-          <img src="img/map.png" width="1440" height="416" alt="191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+          <h2 class="visually-hidden">Наши контакты</h2>
+          <img src="img/map.png" width="1440" height="416" alt="Студия &laquo;Нёрдс&raquo; находится по адресу: Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
           <p>Nërds Design Studio</p>
           <address>
             191186, Санкт-Петербург,<br>
-            ул. Б. Конюшенная, д. 19/8<br>
-            <br>
-            тел. +7(812) 275-75-75
+            ул. Б. Конюшенная, д. 19/8
+            <p>тел. <a href="tel:+78122757575">+7(812) 275-75-75</a></p>
           </address>
-          <a href="blank.html" aria-label="Отправить сообщение">Напишите нам</a>
+          <a href="#">Напишите нам</a>
         </section>
         <section>
-          <h2 class="visually-hidden">Социальные сети</h2>
+          <h2 class="visually-hidden">Мы в социальных сетях</h2>
           <ul>
-            <li><a href="blank.html">ВК</a></li>
-            <li><a href="blank.html">Facebook</a></li>
-            <li><a href="blank.html">Instagram</a></li>
+            <li><a href="#">ВКонтакте</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
           </ul>
           <p>Давайте дружить, это выгодно!</p>
           <p>Скидка 10% для друзей из социальных сетей.</p>
@@ -162,15 +144,14 @@
 
       <!--Попап-->
       <section>
-        <h2 class="visually-hidden">Обратная связь</h2>
-        <p>Напишите нам</p>
-        <form action="https://echo.htmlacademy.ru" method="POST">
-          <label for="field_name">Ваше имя:</label>
-          <input type="text" id="field_name" name="name" placeholder="Имя Фамилия" required>
-          <label for="field_email">Ваш email:</label>
-          <input type="email" id="field_email" name="email" placeholder="email@example.com" required>
-          <label for="field_message">Текст письма:</label>
-          <textarea id="field_message" name="message" required></textarea>
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <fieldset>
+            <legend>Напишите нам</legend>
+            <label>Ваше имя:<input type="text" name="name" placeholder="Имя Фамилия" required></label>
+            <label>Ваш email:<input type="email" name="email" placeholder="email@example.com" required></label>
+            <label>Текст письма:<textarea name="message" required></textarea></label>
+          </fieldset>
           <button type="submit">Отправить</button>
         </form>
         <button type="button">Закрыть окно</button>
