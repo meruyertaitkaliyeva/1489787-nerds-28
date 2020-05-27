@@ -1,0 +1,333 @@
+:root {
+    --basic-black: #000000;
+    --basic-dark: #444444;
+    --basic-extra-dark: #283136;
+    --basic-white: #ffffff;
+    --basic-ultra-light: #eeeeee;
+    --basic-extra-light: #e1e1e1;
+    --basic-light: #d7dcde;
+    --basic-extralight-grey: #dfdfdf;
+    --basic-light-grey: #dbdbdb;
+    --basic-grey: #d5d5d5;
+    --basic-dark-grey: #666666;
+    --basic-extradark-grey: #4d4d4d;
+    --special-light-red: #fb565a;
+    --special-red: #e74246;
+    --special-dark-red: #d7373b;
+    --special-light-green: #00ca74;
+    --special-green: #00bc6c;
+    --special-dark-green: #00aa62;
+    --special-light-yellow: #efc849;
+    --special-yellow: #eab534;
+    --special-dark-yellow: #e5a722;
+}
+
+body {
+    min-width: 1158px;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--basic-extra-dark);
+    background-color: var(--basic-white);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Navigation */
+
+.main-navigation {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: var(--basic-black);
+    background-color: transparent;
+}
+
+.main-navigation-wrapper {
+    background-color: var(--basic-ultra-light);
+}
+
+.site-navigation, .user-navigation {
+    list-style: none;
+}
+
+.site-navigation-current a:not([href]) {
+    border-bottom: 2px solid var(--special-light-red);
+}
+
+.site-navigation a, 
+.user-navigation a {
+    color: var(--basic-black);
+}
+
+.site-navigation a:hover, 
+.site-navigation a:focus, 
+.user-navigation a:hover,
+.user-navigation a:focus {
+    color: var(--special-light-red);
+}
+
+/* Footer */
+
+.main-footer {
+    color: var(--basic-dark);
+    background-color: var(--basic-white);
+}
+
+.contacts-section {
+    background-color: var(--basic-white);
+}
+
+.contacts-section-name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--basic-black);
+    text-transform: uppercase;
+}
+
+.contacts-info, .contacts-info a {
+    color: var(--basic-dark-grey);
+    font-style: inherit;
+}
+
+.socials-list {
+    list-style: none;
+}
+
+.footer-section {
+    text-align: left;
+}
+
+.footer-tagline {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+    color: var(--basic-black);
+}
+
+/* Modal */
+
+.modal-feedback {
+    display: none;
+}
+
+/* Hiding style */
+
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+  
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+  
+    white-space: nowrap;
+  
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* Index Page */
+
+.services-list {
+    list-style: none;
+}
+
+.services-item {
+    text-align: left;
+}
+
+.services-item h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: var(--basic-black);
+    text-transform: uppercase;
+}
+
+.partners-list {
+    list-style: none;
+}
+
+/* Buttons */
+
+.button {
+    font: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    color: var(--basic-white);
+    vertical-align: middle;
+    text-transform: uppercase;
+    background-color: var(--special-light-red);
+    border: none;
+}
+
+.services-app-button {
+    background-color: var(--special-light-green);
+}
+
+.services-present-button {
+    background-color: var(--special-light-yellow);
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--special-red);
+}
+
+.button:active {
+    background-color: var(--special-dark-red);
+}
+
+.services-app-button:hover,
+.services-app-button:focus {
+    background-color: var(--special-green);
+}
+
+.services-app-button:active {
+    background-color: var(--special-dark-green);
+}
+
+.services-present-button:hover,
+.services-present-button:focus {
+    background-color: var(--special-yellow);
+}
+
+.services-present-button:active {
+    background-color: var(--special-dark-yellow);
+}
+
+/* Catalog Page */
+
+.page-title {
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 55px;
+    color: var(--basic-black);
+    text-align: center;
+}
+
+/* Filter */
+
+.filter fieldset {
+    border: none;
+}
+
+.filter-name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--basic-black);
+}
+
+.filter ul {
+    list-style: none;
+    line-height: 19px;
+}
+
+.filter-submit-button {
+    color: var(--basic-black);
+    background-color: var(--basic-ultra-light);
+}
+
+.filter-submit-button:hover,
+.filter-submit-button:focus {
+    background-color: var(--basic-extralight-grey);
+}
+
+.filter-submit-button:active {
+    opacity: 30%;
+    background-color: var(--basic-grey);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Catalog */
+
+.sort-list {
+    list-style: none;
+}
+
+.catalog-list {
+    list-style: none;
+}
+
+.catalog-item-image {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.catalog-item-section {
+    text-align: center;
+    background-color: var(--basic-ultra-light);
+}
+
+.catalog-section-title {
+    color: var(--basic-black);
+}
+
+.catalog-section-title:hover,
+.catalog-section-title:focus {
+    color: var(--special-light-red);
+}
+
+.catalog-section-title:active {
+    opacity: 30%;
+}
+
+.catalog-item-section h3 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.catalog-section-desc {
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--basic-dark-grey);
+}
+
+/* Pagination */
+
+.pagination-list {
+    list-style: none;
+}
+
+.pagination-item a {
+    color: var(--basic-black);
+    background-color: var(--basic-ultra-light);
+    border: none;
+}
+
+.pagination-item-current a:not([href]) {
+    color: var(--basic-black);
+    border: 3px solid var(--basic-light-grey);
+    background-color: var(--basic-white);
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus {
+    background-color: var(--basic-extralight-grey);
+}
+
+.pagination-item a:active {
+    opacity: 30%;
+    background-color: var(--basic-grey);
+}
+
