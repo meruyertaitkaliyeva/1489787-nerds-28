@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Нёрдс. Магазин</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Дизайн-студия «Нёрдс» | Магазин готовых шаблонов</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -11,20 +10,16 @@
 
     <header class="main-header">
         <nav class="main-navigation">
-          <div class="main-navigation-wrapper">
-            <div class="container">
-              <ul class="site-navigation">
-                <li><a  class="main-header-logo" href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии &laquo;Нёрдс&raquo;"></a></li>
-                <li><a href="blank.html">Студия</a></li>
-                <li><a href="blank.html">Клиенты</a></li>
-                <li class="site-navigation-current"><a>Магазин</a></li>
-                <li><a href="blank.html">Контакты</a></li>
-              </ul>
-              <ul class="user-navigation">
-                <li><a href="blank.html">Корзина</a></li>
-              </ul>
-            </div>
-          </div>
+          <a  class="main-header-logo" href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии &laquo;Нёрдс&raquo;"></a>
+          <ul class="site-navigation">
+            <li class="navigation-item"><a href="#">Студия</a></li>
+            <li class="navigation-item"><a href="#">Клиенты</a></li>
+            <li class="navigation-item navigation-item-current"><a>Магазин</a></li>
+            <li class="navigation-item"><a href="#">Контакты</a></li>
+          </ul>
+          <ul class="user-navigation">
+            <li class="navigation-item"><a href="#">Корзина</a></li>
+          </ul>
         </nav>
       </header>
 
@@ -40,13 +35,16 @@
                   <legend class="filter-name">Сетка:</legend>
                   <ul>
                     <li class="filter-option filter-radio">
-                      <label><input class="filter-input filter-input-radio" type="radio" name="grid" value="adaptive" checked>Адаптивная</label>
+                      <input class="filter-input filter-input-radio" type="radio" id="adaptive" name="grid" value="adaptive" checked>
+                      <label class="filter-label" for="adaptive">Адаптивная</label>
                     </li>
                     <li class="filter-option filter-radio">
-                      <label><input class="filter-input filter-input-radio" type="radio" name="grid" value="fixed">Фиксированная</label>
+                      <input class="filter-input filter-input-radio" type="radio" id="fixed" name="grid" value="fixed">
+                      <label class="filter-label" for="fixed">Фиксированная</label>
                     </li>
                     <li class="filter-option filter-radio">
-                      <label><input class="filter-input filter-input-radio" type="radio" name="grid" value="stretching">Резиновая</label>
+                      <input class="filter-input filter-input-radio" type="radio" id="stretching" name="grid" value="stretching">
+                      <label class="filter-label" for="stretching">Резиновая</label>
                     </li>
                   </ul>
                 </fieldset>
@@ -54,19 +52,23 @@
                   <legend class="filter-name">Особенности:</legend>
                   <ul>
                     <li class="filter-option filter-checkbox">
-                      <label class=""><input class="filter-input filter-input-checkbox" type="checkbox" name="slider" checked>Слайдер</label>
+                      <input class="filter-input filter-input-checkbox" type="checkbox" id="slider" name="slider" checked>
+                      <label class="filter-label" for="slider">Слайдер</label>
+                    </li>
+                    <li class="filter-option filter-checkbox"></li>
+                      <label class="filter-label"><input class="filter-input filter-input-checkbox" type="checkbox" name="benefits">Блок преимуществ</label>
                     </li>
                     <li class="filter-option filter-checkbox">
-                      <label class=""><input class="filter-input filter-input-checkbox" type="checkbox" name="benefits">Блок преимуществ</label>
+                      <input class="filter-input filter-input-checkbox" type="checkbox" id="news" name="news" checked>
+                      <label class="filter-label" for="news">Новости</label>
                     </li>
                     <li class="filter-option filter-checkbox">
-                      <label class=""><input class="filter-input filter-input-checkbox" type="checkbox" name="news" checked>Новости</label>
+                      <input class="filter-input filter-input-checkbox" type="checkbox" id="gallery" name="gallery">
+                      <label class="filter-label" for="gallery">Галерея</label>
                     </li>
                     <li class="filter-option filter-checkbox">
-                      <label class=""><input class="filter-input filter-input-checkbox" type="checkbox" name="gallery">Галерея</label>
-                    </li>
-                    <li class="filter-option filter-checkbox">
-                      <label class=""><input class="filter-input filter-input-checkbox" type="checkbox" name="cart">Корзина</label>
+                      <input class="filter-input filter-input-checkbox" type="checkbox" id="cart" name="cart">
+                      <label class="filter-label" for="cart">Корзина</label>
                     </li>
                   </ul>
                 </fieldset>
@@ -75,118 +77,122 @@
           </section>
           <section class="catalog">
               <h2 class="visually-hidden">Каталог шаблонов</h2>
-              <div class="catalog-sort">
-                <p class="filter-name">Сортировать:</p>
+              <div class="sort">
+                <p class="sort-name">Сортировать:</p>
                 <ul class="sort-list">
-                  <li class="sort-item">по цене</li>
-                  <li class="sort-item">по типу</li>
-                  <li class="sort-item">по названию</li>
+                  <li class="sort-item"><a href="#">по цене</a></li>
+                  <li class="sort-item"><a href="#">по типу</a></li>
+                  <li class="sort-item"><a href="#">по названию</a></li>
                 </ul>
                 <ul class="sort-list">
-                  <li class="sort-control">по возрастанию</li>
-                  <li class="sort-control">по убыванию</li>
+                  <li class="sort-control"><a href="#">по возрастанию</a></li>
+                  <li class="sort-control"><a href="#">по убыванию</a></li>
                 </ul>
               </div>
               <ul class="catalog-list">
                 <li class="catalog-item">
-                    <p class="catalog-item-image"><img src="img/img-sedona.jpg" width="360" height="576" alt="Превью сайта Sedona"></p>
-                    <div class="catalog-item-section">
-                      <a class="catalog-section-title" href="blank.html"><h3>Sedona</h3></a>
-                      <p class="catalog-section-desc">Информационный сайт для туристов</p>
-                      <a class="button catalog-section-button" href="blank.html" aria-label="Купить за 9900 рублей">9 900 &#8381</a>
+                    <img class="catalog-item-image" src="img/img-sedona.jpg" width="360" height="576" alt="Превью сайта Sedona">
+                    <div class="catalog-item-info">
+                      <a class="catalog-item-title" href="#"><h3>Sedona</h3></a>
+                      <p class="catalog-item-description">Информационный сайт для туристов</p>
+                      <a class="button catalog-item-button" href="#" aria-label="Купить за 9900 рублей">9 900 &#8381</a>
                     </div>
                 </li>
                 <li class="catalog-item">
-                    <p class="catalog-item-image"><img src="img/img-pink.jpg" width="358" height="576" alt="Превью приложения Pink"></p>
-                    <div class="catalog-item-section">
-                      <a class="catalog-section-title" href="blank.html"><h3>Pink App</h3></a>
-                      <p class="catalog-section-desc">Продуктовый лендинг приложения для iOS и Android</p>
-                      <a class="button catalog-section-button" href="blank.html" aria-label="Купить за 9900 рублей">9 900 &#8381</a>
+                    <img class="catalog-item-image" src="img/img-pink.jpg" width="358" height="576" alt="Превью приложения Pink">
+                    <div class="catalog-item-info">
+                      <a class="catalog-item-title" href="#"><h3>Pink App</h3></a>
+                      <p class="catalog-item-description">Продуктовый лендинг приложения для iOS и Android</p>
+                      <a class="button catalog-item-button" href="#" aria-label="Купить за 9900 рублей">9 900 &#8381</a>
                     </div>
                 </li>
                 <li class="catalog-item">
-                    <p class="catalog-item-image"><img src="img/img-barbershop.jpg" width="364" height="582" alt="Превью сайта Barbershop Borodinski"></p>
-                    <div class="catalog-item-section">
-                      <a class="catalog-section-title" href="blank.html"><h3>Barbershop</h3></a>
-                      <p class="catalog-section-desc">Сайт салона красоты.<br>Для мужчин, да.</p>
-                      <a class="button catalog-section-button" href="blank.html" aria-label="Купить за 9900 рублей">9 900 &#8381</a>
+                    <img class="catalog-item-image" src="img/img-barbershop.jpg" width="364" height="582" alt="Превью сайта Barbershop Borodinski"></p>
+                    <div class="catalog-item-info">
+                      <a class="catalog-item-title" href="#"><h3>Barbershop</h3></a>
+                      <p class="catalog-item-description">Сайт салона красоты.<br>Для мужчин, да.</p>
+                      <a class="button catalog-item-button" href="#" aria-label="Купить за 9900 рублей">9 900 &#8381</a>
                     </div>
                 </li>
                 <li class="catalog-item">
-                    <p class="catalog-item-image"><img src="img/img-mishka.jpg" width="362" height="580" alt="Превью сайта Mishka"></p>
-                    <div class="catalog-item-section">
-                      <a class="catalog-section-title" href="blank.html"><h3>Mishka</h3></a>
-                      <p class="catalog-section-desc">Интернет-магазин вязаных игрушек</p>
-                      <a class="button catalog-section-button" href="blank.html" aria-label="Купить за 9900 рублей">9 900 &#8381</a>
+                    <img class="catalog-item-image" src="img/img-mishka.jpg" width="362" height="580" alt="Превью сайта Mishka">
+                    <div class="catalog-item-info">
+                      <a class="catalog-item-title" href="#"><h3>Mishka</h3></a>
+                      <p class="catalog-item-description">Интернет-магазин вязаных игрушек</p>
+                      <a class="button catalog-item-button" href="#" aria-label="Купить за 9900 рублей">9 900 &#8381</a>
                     </div>
                 </li>
                 <li class="catalog-item">
-                    <p class="catalog-item-image"><img src="img/img-aplus.jpg" width="364" height="582" alt="Превью сайта A+"></p>
-                    <div class="catalog-item-section">
-                      <a class="catalog-section-title" href="blank.html"><h3>A Plus</h3></a>
-                      <p class="catalog-section-desc">Лендинг курсов повышения квалификации</p>
-                      <a class="button catalog-section-button" href="blank.html" aria-label="Купить за 9900 рублей">9 900 &#8381</a>
+                    <img class="catalog-item-image" src="img/img-aplus.jpg" width="364" height="582" alt="Превью сайта A+">
+                    <div class="catalog-item-info">
+                      <a class="catalog-item-title" href="#"><h3>A Plus</h3></a>
+                      <p class="catalog-item-description">Лендинг курсов повышения квалификации</p>
+                      <a class="button catalog-item-button" href="#" aria-label="Купить за 9900 рублей">9 900 &#8381</a>
                     </div>
                 </li>
                 <li class="catalog-item">
-                    <p class="catalog-item-image"><img src="img/img-kvast.jpg" width="362" height="580" alt="Превью сайта Кваст"></p>
-                    <div class="catalog-item-section">
-                      <a class="catalog-section-title" href="blank.html"><h3>Кваст</h3></a>
-                      <p class="catalog-section-desc">Промо-сайт производителя крафтового кваса</p>
-                      <a class="button catalog-section-button" href="blank.html" aria-label="Купить за 9900 рублей">9 900 &#8381</a>
+                    <img class="catalog-item-image" src="img/img-kvast.jpg" width="362" height="580" alt="Превью сайта Кваст">
+                    <div class="catalog-item-info">
+                      <a class="catalog-item-title" href="#"><h3>Кваст</h3></a>
+                      <p class="catalog-item-description">Промо-сайт производителя крафтового кваса</p>
+                      <a class="button catalog-item-button" href="#" aria-label="Купить за 9900 рублей">9 900 &#8381</a>
                     </div>
                 </li>
               </ul>
               <ul class="pagination-list">
                 <li class="pagination-item-current"><a aria-label="Первая страница каталога">1</a></li>
-                <li class="pagination-item"><a href="blank.html" aria-label="Вторая страница каталога">2</a></li>
-                <li class="pagination-item"><a href="blank.html" aria-label="Третья страница каталога">3</a></li>
-                <li class="pagination-item pagination-item-next"><a href="blank.html" aria-label="Переход на следующую страницу каталога">Следующая</a></li>
+                <li class="pagination-item"><a href="#" aria-label="Вторая страница каталога">2</a></li>
+                <li class="pagination-item"><a href="#" aria-label="Третья страница каталога">3</a></li>
+                <li class="pagination-item pagination-item-next"><a href="#" aria-label="Переход на следующую страницу каталога">Следующая</a></li>
               </ul>
+          </section>
+          <section class="contacts">
+            <h2 class="visually-hidden">Наши контакты</h2>
+            <img class="map-image" src="img/map.png" width="1440" height="416" alt="Студия &laquo;Нёрдс&raquo; находится по адресу: Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+            <!--<img class="map-marker" src="img/map-marker.png" width="231" height="190" alt="Указатель местоположения студии на карте">-->
+            <div class="contacts-info">
+              <p class="contacts-title">Nërds Design Studio</p>
+                <address class="contacts-address">
+                  191186, Санкт-Петербург,<br>
+                  ул. Б. Конюшенная, д. 19/8
+                  <p>тел. <a href="tel:+78122757575">+7(812) 275-75-75</a></p>
+                </address>
+              <a class="button contacts-button" href="#">Напишите нам</a>
+            </div>
           </section>
       </main>
 
       <footer class="main-footer">
-        <div class="container">
-          <section class="contacts">
-            <h2 class="visually-hidden">Наши контакты</h2>
-            <img class="map-image" src="img/map.png" width="1440" height="416" alt="Студия &laquo;Нёрдс&raquo; находится по адресу: Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-            <img class="map-marker" src="img/map-marker.png" width="231" height="190" alt="Указатель местоположения студии на карте">
-            <div class="contacts-section">
-              <p class="contacts-section-name">Nërds Design Studio</p>
-              <address class="contacts-info">
-                191186, Санкт-Петербург,<br>
-                ул. Б. Конюшенная, д. 19/8
-                <p>тел. <a href="tel:+78122757575">+7(812) 275-75-75</a></p>
-              </address>
-              <a class="button contacts-section-button" href="blank.html">Напишите нам</a>
-            </div>
-          </section>
-          <section class="socials">
-            <h2 class="visually-hidden">Мы в социальных сетях</h2>
-            <ul class="socials-list">
-              <li><a class="socials-item" href="blank.html">ВКонтакте</a></li>
-              <li><a class="socials-item" href="blank.html">Facebook</a></li>
-              <li><a class="socials-item" href="blank.html">Instagram</a></li>
-            </ul>
-            <div class="footer-section">
-              <p class="footer-tagline">Давайте дружить, это выгодно!</p>
-              <p>Скидка 10% для друзей из социальных сетей.</p>
-            </div>
-          </section>
-        </div>
+        <section class="socials">
+          <h2 class="visually-hidden">Мы в социальных сетях</h2>
+          <ul class="socials-list">
+            <li><a class="socials-item" href="#">ВКонтакте</a></li>
+            <li><a class="socials-item" href="#">Facebook</a></li>
+            <li><a class="socials-item" href="#">Instagram</a></li>
+          </ul>
+          <div class="footer-section">
+            <p class="footer-tagline">Давайте дружить, это выгодно!</p>
+            <p class="footer-text">Скидка 10% для друзей из социальных сетей.</p>
+          </div>
+        </section>
       </footer>
   
-      <section class="modal-feedback">
+      <section class="modal">
         <h2 class="visually-hidden">Форма обратной связи</h2>
-        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="feedback-form-set">
-            <legend class="form-name">Напишите нам</legend>
-            <label class="input-name">Ваше имя:<input class="input-field" type="text" name="name" placeholder="Имя Фамилия" required></label>
-            <label class="input-name">Ваш email:<input class="input-field" type="email" name="email" placeholder="email@example.com" required></label>
-            <label class="input-name">Текст письма:<textarea class="input-message" name="message" required></textarea></label>
+        <form class="feedback" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="feedback-fieldset">
+            <legend class="feedback-legend">Напишите нам</legend>
+            <label class="feedback-label">Ваше имя:
+              <input class="feedback-input" type="text" name="name" placeholder="Имя Фамилия" required>
+            </label>
+            <label class="feedback-label">Ваш email:
+              <input class="feedback-input" type="email" name="email" placeholder="email@example.com" required>
+            </label>
+            <label class="feedback-label">Текст письма:
+              <textarea class="feedback-textarea" placeholder="В свободной форме" name="message" required></textarea>
+            </label>
           </fieldset>
-          <button class="button form-submit-button" type="submit">Отправить</button>
+          <button class="button feedback-button" type="submit">Отправить</button>
         </form>
         <button class="modal-close-button" type="button">Закрыть окно</button>
       </section>
