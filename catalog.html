@@ -10,28 +10,32 @@
 
     <header class="main-header">
         <nav class="main-navigation">
-          <a  class="main-header-logo" href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии &laquo;Нёрдс&raquo;"></a>
-          <ul class="site-navigation">
-            <li class="navigation-item"><a href="#">Студия</a></li>
-            <li class="navigation-item"><a href="#">Клиенты</a></li>
-            <li class="navigation-item navigation-item-current"><a>Магазин</a></li>
-            <li class="navigation-item"><a href="#">Контакты</a></li>
-          </ul>
-          <ul class="user-navigation">
-            <li class="navigation-item"><a href="#">Корзина</a></li>
-          </ul>
+          <div class="container">
+            <a  class="main-header-logo" href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии &laquo;Нёрдс&raquo;"></a>
+            <ul class="site-navigation">
+              <li class="navigation-item"><a href="#">Студия</a></li>
+              <li class="navigation-item"><a href="#">Клиенты</a></li>
+              <li class="navigation-item navigation-item-current"><a>Магазин</a></li>
+              <li class="navigation-item"><a href="#">Контакты</a></li>
+            </ul>
+            <ul class="user-navigation">
+              <li class="navigation-item"><a href="#">Корзина</a></li>
+            </ul>
+          </div>
         </nav>
       </header>
 
-      <main class="container">
+      <main class="main">
+        <div class="container">
           <h1 class="page-title">Магазин готовых шаблонов</h1>
-          <section class="filters">
+          <div class="catalog-page">
+            <section class="filters">
               <h2 class="visually-hidden">Подбор шаблона по параметрам</h2>
               <form class="filter" action="https://echo.htmlacademy.ru" method="get">
-                <fieldset>
+                <fieldset class="filter-type">
                   <legend class="filter-name">Стоимость:</legend>
                 </fieldset>
-                <fieldset>
+                <fieldset class="filter-type">
                   <legend class="filter-name">Сетка:</legend>
                   <ul>
                     <li class="filter-option filter-radio">
@@ -48,15 +52,16 @@
                     </li>
                   </ul>
                 </fieldset>
-                <fieldset>
+                <fieldset class="filter-type">
                   <legend class="filter-name">Особенности:</legend>
                   <ul>
                     <li class="filter-option filter-checkbox">
                       <input class="filter-input filter-input-checkbox" type="checkbox" id="slider" name="slider" checked>
                       <label class="filter-label" for="slider">Слайдер</label>
                     </li>
-                    <li class="filter-option filter-checkbox"></li>
-                      <label class="filter-label"><input class="filter-input filter-input-checkbox" type="checkbox" name="benefits">Блок преимуществ</label>
+                    <li class="filter-option filter-checkbox">
+                      <input class="filter-input filter-input-checkbox" type="checkbox" id="benefits" name="benefits">
+                      <label class="filter-label" for="benefits">Блок преимуществ</label>
                     </li>
                     <li class="filter-option filter-checkbox">
                       <input class="filter-input filter-input-checkbox" type="checkbox" id="news" name="news" checked>
@@ -74,70 +79,76 @@
                 </fieldset>
                 <button class="button filter-submit-button" type="submit">Показать</button>
               </form>
-          </section>
-          <section class="catalog">
+            </section>
+            <section class="catalog">
               <h2 class="visually-hidden">Каталог шаблонов</h2>
               <div class="sort">
                 <p class="sort-name">Сортировать:</p>
-                <ul class="sort-list">
-                  <li class="sort-item"><a href="#">по цене</a></li>
-                  <li class="sort-item"><a href="#">по типу</a></li>
-                  <li class="sort-item"><a href="#">по названию</a></li>
-                </ul>
-                <ul class="sort-list">
-                  <li class="sort-control"><a href="#">по возрастанию</a></li>
-                  <li class="sort-control"><a href="#">по убыванию</a></li>
-                </ul>
+                <div class="sort-types">
+                  <ul class="sort-type-list">
+                    <li class="sort-item"><a href="#">по цене</a></li>
+                    <li class="sort-item"><a href="#">по типу</a></li>
+                    <li class="sort-item"><a href="#">по названию</a></li>
+                  </ul>
+                  <ul class="sort-control-list">
+                    <li class="sort-control"><a href="#">по возрастанию</a></li>
+                    <li class="sort-control"><a href="#">по убыванию</a></li>
+                  </ul>
+                </div>
               </div>
               <ul class="catalog-list">
-                <li class="catalog-item">
+                <div class="catalog-list-column">
+                  <li class="catalog-item">
                     <img class="catalog-item-image" src="img/img-sedona.jpg" width="360" height="576" alt="Превью сайта Sedona">
                     <div class="catalog-item-info">
                       <a class="catalog-item-title" href="#"><h3>Sedona</h3></a>
                       <p class="catalog-item-description">Информационный сайт для туристов</p>
                       <a class="button catalog-item-button" href="#" aria-label="Купить за 9900 рублей">9 900 &#8381</a>
                     </div>
-                </li>
-                <li class="catalog-item">
-                    <img class="catalog-item-image" src="img/img-pink.jpg" width="358" height="576" alt="Превью приложения Pink">
-                    <div class="catalog-item-info">
-                      <a class="catalog-item-title" href="#"><h3>Pink App</h3></a>
-                      <p class="catalog-item-description">Продуктовый лендинг приложения для iOS и Android</p>
-                      <a class="button catalog-item-button" href="#" aria-label="Купить за 9900 рублей">9 900 &#8381</a>
-                    </div>
-                </li>
-                <li class="catalog-item">
+                  </li>
+                  <li class="catalog-item">
                     <img class="catalog-item-image" src="img/img-barbershop.jpg" width="364" height="582" alt="Превью сайта Barbershop Borodinski"></p>
                     <div class="catalog-item-info">
                       <a class="catalog-item-title" href="#"><h3>Barbershop</h3></a>
                       <p class="catalog-item-description">Сайт салона красоты.<br>Для мужчин, да.</p>
                       <a class="button catalog-item-button" href="#" aria-label="Купить за 9900 рублей">9 900 &#8381</a>
                     </div>
-                </li>
-                <li class="catalog-item">
-                    <img class="catalog-item-image" src="img/img-mishka.jpg" width="362" height="580" alt="Превью сайта Mishka">
-                    <div class="catalog-item-info">
-                      <a class="catalog-item-title" href="#"><h3>Mishka</h3></a>
-                      <p class="catalog-item-description">Интернет-магазин вязаных игрушек</p>
-                      <a class="button catalog-item-button" href="#" aria-label="Купить за 9900 рублей">9 900 &#8381</a>
-                    </div>
-                </li>
-                <li class="catalog-item">
+                  </li>
+                  <li class="catalog-item">
                     <img class="catalog-item-image" src="img/img-aplus.jpg" width="364" height="582" alt="Превью сайта A+">
                     <div class="catalog-item-info">
                       <a class="catalog-item-title" href="#"><h3>A Plus</h3></a>
                       <p class="catalog-item-description">Лендинг курсов повышения квалификации</p>
                       <a class="button catalog-item-button" href="#" aria-label="Купить за 9900 рублей">9 900 &#8381</a>
                     </div>
-                </li>
-                <li class="catalog-item">
+                  </li>
+                </div>
+                <div class="catalog-list-column">
+                  <li class="catalog-item">
+                    <img class="catalog-item-image" src="img/img-pink.jpg" width="358" height="576" alt="Превью приложения Pink">
+                    <div class="catalog-item-info">
+                      <a class="catalog-item-title" href="#"><h3>Pink App</h3></a>
+                      <p class="catalog-item-description">Продуктовый лендинг приложения для iOS и Android</p>
+                      <a class="button catalog-item-button" href="#" aria-label="Купить за 9900 рублей">9 900 &#8381</a>
+                    </div>
+                  </li>
+                  <li class="catalog-item">
+                    <img class="catalog-item-image" src="img/img-mishka.jpg" width="362" height="580" alt="Превью сайта Mishka">
+                    <div class="catalog-item-info">
+                      <a class="catalog-item-title" href="#"><h3>Mishka</h3></a>
+                      <p class="catalog-item-description">Интернет-магазин вязаных игрушек</p>
+                      <a class="button catalog-item-button" href="#" aria-label="Купить за 9900 рублей">9 900 &#8381</a>
+                    </div>
+                  </li>
+                  <li class="catalog-item">
                     <img class="catalog-item-image" src="img/img-kvast.jpg" width="362" height="580" alt="Превью сайта Кваст">
                     <div class="catalog-item-info">
                       <a class="catalog-item-title" href="#"><h3>Кваст</h3></a>
                       <p class="catalog-item-description">Промо-сайт производителя крафтового кваса</p>
                       <a class="button catalog-item-button" href="#" aria-label="Купить за 9900 рублей">9 900 &#8381</a>
                     </div>
-                </li>
+                  </li>
+                </div>
               </ul>
               <ul class="pagination-list">
                 <li class="pagination-item-current"><a aria-label="Первая страница каталога">1</a></li>
@@ -145,21 +156,23 @@
                 <li class="pagination-item"><a href="#" aria-label="Третья страница каталога">3</a></li>
                 <li class="pagination-item pagination-item-next"><a href="#" aria-label="Переход на следующую страницу каталога">Следующая</a></li>
               </ul>
-          </section>
-          <section class="contacts">
-            <h2 class="visually-hidden">Наши контакты</h2>
-            <img class="map-image" src="img/map.png" width="1440" height="416" alt="Студия &laquo;Нёрдс&raquo; находится по адресу: Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-            <!--<img class="map-marker" src="img/map-marker.png" width="231" height="190" alt="Указатель местоположения студии на карте">-->
-            <div class="contacts-info">
-              <p class="contacts-title">Nërds Design Studio</p>
-                <address class="contacts-address">
-                  191186, Санкт-Петербург,<br>
-                  ул. Б. Конюшенная, д. 19/8
-                  <p>тел. <a href="tel:+78122757575">+7(812) 275-75-75</a></p>
-                </address>
-              <a class="button contacts-button" href="#">Напишите нам</a>
-            </div>
-          </section>
+            </section>
+          </div>
+        </div>
+        <section class="contacts">
+          <h2 class="visually-hidden">Наши контакты</h2>
+          <img class="map-image" src="img/map.png" width="1440" height="416" alt="Студия &laquo;Нёрдс&raquo; находится по адресу: Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+          <!--<img class="map-marker" src="img/map-marker.png" width="231" height="190" alt="Указатель местоположения студии на карте">-->
+          <div class="contacts-info">
+            <p class="contacts-title">Nërds Design Studio</p>
+              <address class="contacts-address">
+                191186, Санкт-Петербург,<br>
+                ул. Б. Конюшенная, д. 19/8
+                <p>тел. <a href="tel:+78122757575">+7(812) 275-75-75</a></p>
+              </address>
+            <a class="button contacts-button" href="#">Напишите нам</a>
+          </div>
+        </section>
       </main>
 
       <footer class="main-footer">
