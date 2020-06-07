@@ -444,10 +444,11 @@ input[type="radio"].visually-hidden {
 /* info */
 
 .info {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 651px 360px;
+  column-gap: 149px;
   position: relative;
-  margin-bottom: 75px;
+  margin-bottom: 42px;
   padding-top: 73px;
 }
 
@@ -463,7 +464,7 @@ input[type="radio"].visually-hidden {
 
 .info-content-tagline {
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 26px;
   padding: 0;
   font-weight: 500;
   font-size: 45px;
@@ -507,7 +508,7 @@ input[type="radio"].visually-hidden {
   position: relative;
   margin: 0;
   margin-bottom: 31px;
-  padding-top: 245px;
+  padding-top: 210px;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
@@ -516,7 +517,7 @@ input[type="radio"].visually-hidden {
 .info-stats-title::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -35px;
   left: 0;
   width: 360px;
   height: 208px;
@@ -623,7 +624,7 @@ input[type="radio"].visually-hidden {
 .contacts {
   position: relative;
   padding: 0;
-  margin-bottom: 75px;
+  margin-bottom: 58px;
 }
 
 .map-image {
@@ -666,6 +667,7 @@ input[type="radio"].visually-hidden {
 .contacts-address {
   margin: 0;
   margin-bottom: 37px;
+  line-height: 18px;
 }
 
 .contacts-address,
@@ -1150,7 +1152,10 @@ input[type="radio"].visually-hidden {
   display: grid;
   grid-template-columns: min-content 1fr;
   column-gap: 139px;
+  align-items: flex-end;
+  margin: 0;
   margin-bottom: 68px;
+  padding: 0;
   position: relative;
 }
 
