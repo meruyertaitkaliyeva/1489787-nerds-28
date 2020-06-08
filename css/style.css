@@ -97,6 +97,7 @@ img {
   text-transform: uppercase;
   background-color: var(--special-light-red);
   border: none;
+  cursor: pointer;
 }
 
 .button:hover,
@@ -955,6 +956,7 @@ input[type="radio"].visually-hidden {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .sort-item-current {
@@ -1116,6 +1118,8 @@ input[type="radio"].visually-hidden {
   color: var(--basic-black);
   background-color: var(--basic-ultra-light);
   border: none;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
 .pagination-next a {
@@ -1177,6 +1181,7 @@ input[type="radio"].visually-hidden {
   height: 81px;
   border-radius: 50%;
   background-color: var(--basic-extra-light);
+  cursor: pointer;
 }
 
 .socials-link::before {
@@ -1359,6 +1364,7 @@ input[type="radio"].visually-hidden {
   background-color: var(--basic-white);
   border: none;
   opacity: 0.3;
+  cursor: pointer;
 }
 
 .modal-close-button:hover,

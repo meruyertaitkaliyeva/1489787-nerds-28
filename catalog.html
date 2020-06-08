@@ -203,25 +203,59 @@
       </section>
     </footer>
   
-      <section class="modal">
-        <h2 class="visually-hidden">Форма обратной связи</h2>
-        <form class="feedback" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="feedback-fieldset">
-            <legend class="feedback-legend">Напишите нам</legend>
-            <label class="feedback-label">Ваше имя:
-              <input class="feedback-input" type="text" name="name" placeholder="Имя Фамилия" required>
-            </label>
-            <label class="feedback-label">Ваш email:
-              <input class="feedback-input" type="email" name="email" placeholder="email@example.com" required>
-            </label>
-            <label class="feedback-label">Текст письма:
-              <textarea class="feedback-textarea" placeholder="В свободной форме" name="message" required></textarea>
-            </label>
-          </fieldset>
-          <button class="button feedback-button" type="submit">Отправить</button>
-        </form>
-        <button class="modal-close-button" type="button">Закрыть окно</button>
-      </section>
+    <section class="modal">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <form class="feedback" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="feedback-fieldset">
+          <legend class="feedback-legend">Напишите нам</legend>
+          <ul class="feedback-form">
+            <li class="feedback-item">
+              <label class="feedback-label"
+                >Ваше имя:
+                <input
+                  class="feedback-input"
+                  type="text"
+                  name="name"
+                  placeholder="Имя Фамилия"
+                  required
+                />
+              </label>
+            </li>
+            <li class="feedback-item">
+              <label class="feedback-label"
+                >Ваш email:
+                <input
+                  class="feedback-input"
+                  type="email"
+                  name="email"
+                  placeholder="email@example.com"
+                  required
+                />
+              </label>
+            </li>
+            <li class="feedback-text">
+              <label class="feedback-label"
+                >Текст письма:
+                <textarea
+                  class="feedback-textarea"
+                  placeholder="В свободной форме"
+                  name="message"
+                  required
+                ></textarea>
+              </label>
+            </li>
+          </ul>
+          <button class="button feedback-button" type="submit">
+            Отправить
+          </button>
+        </fieldset>
+        <button
+          class="modal-close-button"
+          type="button"
+          aria-label="Закрыть окно"
+        ></button>
+      </form>
+    </section>
 
   </body>
 </html>
