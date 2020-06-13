@@ -251,17 +251,17 @@
         <ul class="feedback-form">
           <li class="feedback-item">
             <label class="feedback-label">Ваше имя:
-              <input class="feedback-input" type="text" name="name" placeholder="Имя Фамилия" required />
+              <input class="feedback-name feedback-field" type="text" name="name" placeholder="Имя Фамилия" required>
             </label>
           </li>
           <li class="feedback-item">
             <label class="feedback-label">Ваш email:
-              <input class="feedback-input" type="email" name="email" placeholder="email@example.com" required />
+              <input class="feedback-email feedback-field" type="email" name="email" placeholder="email@example.com" required>
             </label>
           </li>
           <li class="feedback-text">
             <label class="feedback-label">Текст письма:
-              <textarea class="feedback-textarea" placeholder="В свободной форме" name="message" required></textarea>
+              <textarea class="feedback-textarea feedback-field" placeholder="В свободной форме" name="message" required></textarea>
             </label>
           </li>
         </ul>
@@ -271,6 +271,7 @@
     </form>
   </section>
 
+  <script src="js/script.js"></script>
 </body>
 
 </html>
