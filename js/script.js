@@ -7,10 +7,12 @@ var feedbackName = feedbackModal.querySelector(".feedback-name");
 var feedbackEmail = feedbackModal.querySelector(".feedback-email");
 var feedbackText = feedbackModal.querySelector(".feedback-textarea");
 var isStorageSupport = true;
-var storage = "";
+var storageName = "";
+var storageEmail = "";
 
 try {
-    storage = localStorage.getItem("name");
+    storageName = localStorage.getItem("name");
+    storageEmail = localStorage.getItem("email");
 } catch (err) {
     isStorageSupport = false;
 }
@@ -18,14 +20,16 @@ try {
 feedbackLink.addEventListener("click", function (evt) {
     evt.preventDefault();
     feedbackModal.classList.add("modal-show");
-    if (storage) {
-        feedbackName.value = storage;
+    if (storageName) {
+        feedbackName.value = storageName;
         feedbackEmail.focus();
-    } if (storage) {
-        feedbackEmail.value = storage;
-        feedbackText.focus();
+    } else {
+        feedbackName.focus();
     }
-    else {
+    if (storageEmail) {
+        feedbackEmail.value = storageEmail;
+        feedbackText.focus();
+    } else {
         feedbackName.focus();
     }
 });
