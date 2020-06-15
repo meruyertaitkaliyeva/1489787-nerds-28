@@ -40,7 +40,6 @@ feedbackForm.addEventListener("submit", function (evt) {
             localStorage.setItem("email", feedbackEmail.value);
         }
     }
-    
 });
 
 feedbackClose.addEventListener("click", function (evt) {
