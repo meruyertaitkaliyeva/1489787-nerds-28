@@ -813,10 +813,9 @@ input[type="radio"].visually-hidden {
   margin: 0;
   margin-bottom: 55px;
   padding-top: 73px;
-  padding-right: 347px;
-  padding-left: 348px;
   padding-bottom: 108px;
 
+  text-align: center;
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
@@ -864,7 +863,7 @@ input[type="radio"].visually-hidden {
   position: relative;
 
   height: 41px;
-  margin-bottom: 17px;
+  margin-bottom: 16px;
   padding-top: 39px;
   padding-right: 22px;
   padding-left: 22px;
@@ -918,7 +917,7 @@ input[type="radio"].visually-hidden {
 
 .price-controls input {
   width: 60px;
-  margin-left: 5px;
+  margin-left: 6px;
   padding: 8px 10px;
   border: none;
 
@@ -1250,7 +1249,7 @@ input[type="radio"].visually-hidden {
   opacity: 0;
 }
 
-.catalog-item-info:hover {
+.catalog-item:hover .catalog-item-info {
   opacity: 1;
 }
 
@@ -1271,12 +1270,12 @@ input[type="radio"].visually-hidden {
   color: var(--basic-black);
 }
 
-.catalog-item-title:hover a,
-.catalog-item-title:focus a {
+.catalog-item-title a:hover,
+.catalog-item-title a:focus {
   color: var(--special-light-red);
 }
 
-.catalog-item-title:active a {
+.catalog-item-title a:active {
   color: var(--opasity-black);
 }
 
@@ -1614,18 +1613,21 @@ input[type="radio"].visually-hidden {
 
 .feedback-field:hover {
   border-color: var(--special-hover-grey);
+  outline-style: none;
 }
 
 .feedback-field:focus,
 .feedback-field:active {
   border-color: var(--basic-black);
+  outline-style: none;
   opacity: 1;
 }
 
 .feedback-field:focus:required:invalid {
   color: var(--special-red);
-  opacity: 1;
   border: 2px solid var(--special-red);
+  outline-style: none;
+  opacity: 1;
 }
 
 .feedback-button {
