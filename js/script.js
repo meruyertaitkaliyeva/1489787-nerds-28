@@ -34,16 +34,20 @@ feedbackLink.addEventListener("click", function (evt) {
     }
 });
 
-feedbackClose.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    feedbackModal.classList.remove("modal-show");
-});
-
 feedbackForm.addEventListener("submit", function (evt) {
-    if (!feedbackName.value || !feedbackEmail.value || !feedbackText.value) {
+    if (!feedbackName.value) {
         evt.preventDefault();
-        feedbackField.classList.add("feedback-invalid");
-    } else {
+        feedbackName.classList.add("feedback-invalid");
+    } 
+    else if (!feedbackEmail.value) {
+        evt.preventDefault();
+        feedbackEmail.classList.add("feedback-invalid");
+    } 
+    else if (!feedbackText.value) {
+        evt.preventDefault();
+        feedbackText.classList.add("feedback-invalid");
+    } 
+    else {
         if (isStorageSupport) {
             localStorage.setItem("name", feedbackName.value);
             localStorage.setItem("email", feedbackEmail.value);
@@ -52,12 +56,16 @@ feedbackForm.addEventListener("submit", function (evt) {
     
 });
 
+feedbackClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    feedbackModal.classList.remove("modal-show");
+});
+
 window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
         if (feedbackModal.classList.contains("modal-show")) {
             evt.preventDefault();
             feedbackModal.classList.remove("modal-show");
-            feedbackModal.classList.remove("feedback-invalid");
         }
     }
 });
