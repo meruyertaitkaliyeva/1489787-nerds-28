@@ -2,7 +2,6 @@ var feedbackLink = document.querySelector(".contacts-button");
 var feedbackModal = document.querySelector(".modal-feedback");
 var feedbackClose = feedbackModal.querySelector(".modal-close-button");
 var feedbackForm = feedbackModal.querySelector(".feedback");
-var feedbackField = feedbackModal.querySelector(".feedback-field");
 var feedbackName = feedbackModal.querySelector(".feedback-name");
 var feedbackEmail = feedbackModal.querySelector(".feedback-email");
 var feedbackText = feedbackModal.querySelector(".feedback-textarea");
@@ -23,8 +22,6 @@ feedbackLink.addEventListener("click", function (evt) {
     if (storageName) {
         feedbackName.value = storageName;
         feedbackEmail.focus();
-    } else {
-        feedbackName.focus();
     }
     if (storageEmail) {
         feedbackEmail.value = storageEmail;
@@ -35,19 +32,9 @@ feedbackLink.addEventListener("click", function (evt) {
 });
 
 feedbackForm.addEventListener("submit", function (evt) {
-    if (!feedbackName.value) {
+    if (!feedbackName.value || !feedbackEmail.value || !feedbackText.value) {
         evt.preventDefault();
-        feedbackName.classList.add("feedback-invalid");
-    } 
-    else if (!feedbackEmail.value) {
-        evt.preventDefault();
-        feedbackEmail.classList.add("feedback-invalid");
-    } 
-    else if (!feedbackText.value) {
-        evt.preventDefault();
-        feedbackText.classList.add("feedback-invalid");
-    } 
-    else {
+    } else {
         if (isStorageSupport) {
             localStorage.setItem("name", feedbackName.value);
             localStorage.setItem("email", feedbackEmail.value);
