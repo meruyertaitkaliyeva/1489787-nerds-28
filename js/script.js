@@ -34,6 +34,16 @@ feedbackLink.addEventListener("click", function (evt) {
 feedbackForm.addEventListener("submit", function (evt) {
     if (!feedbackName.value || !feedbackEmail.value || !feedbackText.value) {
         evt.preventDefault();
+        feedbackModal.classList.add("modal-error");
+    }
+    if (!feedbackName.value) {
+        feedbackName.classList.add("feedback-invalid");
+    }
+    if (!feedbackEmail.value) {
+        feedbackEmail.classList.add("feedback-invalid");
+    }
+    if (!feedbackText.value) {
+        feedbackText.classList.add("feedback-invalid");
     } else {
         if (isStorageSupport) {
             localStorage.setItem("name", feedbackName.value);
@@ -45,6 +55,7 @@ feedbackForm.addEventListener("submit", function (evt) {
 feedbackClose.addEventListener("click", function (evt) {
     evt.preventDefault();
     feedbackModal.classList.remove("modal-show");
+    feedbackModal.classList.remove("modal-error");
 });
 
 window.addEventListener("keydown", function (evt) {
@@ -52,6 +63,7 @@ window.addEventListener("keydown", function (evt) {
         if (feedbackModal.classList.contains("modal-show")) {
             evt.preventDefault();
             feedbackModal.classList.remove("modal-show");
+            feedbackModal.classList.remove("modal-error");
         }
     }
 });
