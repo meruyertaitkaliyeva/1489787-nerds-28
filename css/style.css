@@ -1629,9 +1629,10 @@ input[type="radio"].visually-hidden {
   opacity: 1;
 }
 
-.feedback-invalid {
-  color: var(--special-red);
+.feedback-field:invalid {
   border: 2px solid var(--special-red);
+  
+  color: var(--special-red);
   outline-style: none;
   opacity: 1;
 }
