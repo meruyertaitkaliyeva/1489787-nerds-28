@@ -48,6 +48,7 @@ feedbackForm.addEventListener("submit", function (evt) {
 feedbackClose.addEventListener("click", function (evt) {
     evt.preventDefault();
     feedbackModal.classList.remove("modal-show");
+    feedbackModal.classList.remove("modal-error");
 });
 
 window.addEventListener("keydown", function (evt) {
@@ -55,6 +56,7 @@ window.addEventListener("keydown", function (evt) {
         if (feedbackModal.classList.contains("modal-show")) {
             evt.preventDefault();
             feedbackModal.classList.remove("modal-show");
+            feedbackModal.classList.remove("modal-error");
         }
     }
 });
