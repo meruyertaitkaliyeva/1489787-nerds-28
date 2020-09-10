@@ -5,9 +5,44 @@ var feedbackForm = feedbackModal.querySelector(".feedback");
 var feedbackName = feedbackModal.querySelector(".feedback-name");
 var feedbackEmail = feedbackModal.querySelector(".feedback-email");
 var feedbackText = feedbackModal.querySelector(".feedback-textarea");
+var secondSlide = document.querySelector(".second-slide");
+var thirdSlide = document.querySelector(".third-slide");
+var firstControl = document.querySelector(".first-control");
+var secondControl = document.querySelector(".second-control");
+var thirdControl = document.querySelector(".third-control");
 var isStorageSupport = true;
 var storageName = "";
 var storageEmail = "";
+
+firstControl.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  secondControl.classList.remove("control-current");
+  thirdControl.classList.remove("control-current");
+  firstControl.classList.add("control-current");
+  secondSlide.classList.remove(".slider-current");
+  thirdSlide.classList.remove(".slider-current");
+  firstSlide.classList.add(".slider-current");
+})
+
+secondControl.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  thirdControl.classList.remove("control-current");
+  firstControl.classList.remove("control-current");
+  secondControl.classList.add("control-current");
+  thirdSlide.classList.remove(".slider-current");
+  firstSlide.classList.remove(".slider-current");
+  secondSlide.classList.add(".slider-current");
+})
+
+thirdControl.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  firstControl.classList.remove("control-current");
+  secondControl.classList.remove("control-current");
+  thirdControl.classList.add("control-current");
+  firstSlide.classList.remove(".slider-current");
+  secondSlide.classList.remove(".slider-current");
+  thirdSlide.classList.add(".slider-current");
+})
 
 try {
     storageName = localStorage.getItem("name");
