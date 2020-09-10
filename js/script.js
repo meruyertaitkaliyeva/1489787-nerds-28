@@ -5,6 +5,7 @@ var feedbackForm = feedbackModal.querySelector(".feedback");
 var feedbackName = feedbackModal.querySelector(".feedback-name");
 var feedbackEmail = feedbackModal.querySelector(".feedback-email");
 var feedbackText = feedbackModal.querySelector(".feedback-textarea");
+var firstSlide = document.querySelector(".first-slide");
 var secondSlide = document.querySelector(".second-slide");
 var thirdSlide = document.querySelector(".third-slide");
 var firstControl = document.querySelector(".first-control");
